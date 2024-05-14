@@ -70,8 +70,6 @@ Each of these constraints is built into our BQM object with a coefficient (names
 
 An alternative demo file, `demo_numpy.py`, shows how the BQM for this problem can be constructed using NumPy arrays and vectors. Utilizing NumPy and matrix operations allows for a much faster construction of the BQM than building it with for-loops. As problem instances become larger and larger, it becomes more and more important to efficiently build the BQM to save time in the initialization and setup of the model. The chart below demonstrates the savings in classical compute time when setting up the BQM for this problem using for-loops versus using efficient NumPy operations in the Leap IDE.
 
-![Classical comparison](readme_imgs/runtimes.png "Classical Runtime Comparison")
-
 ## References
 
 <a name="1">[1]</a> Pagany, Raphaela, Anna Marquardt, and Roland Zink. "Electric Charging Demand Location Model—A User-and Destination-Based Locating Approach for Electric Vehicle Charging Stations." Sustainability 11.8 (2019): 2301. [https://doi.org/10.3390/su11082301](https://doi.org/10.3390/su11082301)
