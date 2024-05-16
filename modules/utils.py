@@ -1,8 +1,12 @@
-import matplotlib.pyplot as plt
 import os
+from typing import List, Tuple, Optional
+
 import geopandas as gpd
 import pandas as pd
 import networkx as nx
+
+import matplotlib.pyplot as plt
+
 
 def load_data(folder_path: str) -> gpd.GeoDataFrame:
     """
@@ -25,7 +29,13 @@ def load_data(folder_path: str) -> gpd.GeoDataFrame:
     gdf = pd.concat(gdf)
     return gdf
 
-def output_image(G, pois, charging_stations, new_charging_nodes=[]):
+
+def output_image(
+    graph: nx.Graph,
+    pois: List[Tuple[int, int]],
+    charging_stations: List[Tuple[int, int]],
+    new_charging_nodes: Optional[List[Tuple[int, int]]] = None,
+) -> None:
     """Create output image of solution scenario.
 
     Args:
@@ -39,18 +49,18 @@ def output_image(G, pois, charging_stations, new_charging_nodes=[]):
     Returns:
         None. Output saved to file "map.png".
     """
-    fig, ax = plt.subplots(figsize=(8, 8))
-    #fig.suptitle("New EV Charger Locations")
-    pos = {x: [x[0], x[1]] for x in G.nodes()}
+    _, ax = plt.subplots(figsize=(8, 8))
+    # fig.suptitle("New EV Charger Locations")
+    pos = {x: [x[0], x[1]] for x in graph.nodes()}
 
     # Locate POIs in map
-    poi_graph = G.subgraph(pois)
+    poi_graph = graph.subgraph(pois)
 
     # Locate old charging stations in map
-    cs_graph = G.subgraph(charging_stations)
+    cs_graph = graph.subgraph(charging_stations)
 
     nx.draw_networkx(
-        G,
+        graph,
         ax=ax,
         pos=pos,
         with_labels=False,
@@ -73,10 +83,10 @@ def output_image(G, pois, charging_stations, new_charging_nodes=[]):
         node_color="r",
         node_size=75,
     )
-    if len(new_charging_nodes)>0:
+    if new_charging_nodes is not None:
         if isinstance(new_charging_nodes[0], list):
             new_charging_nodes = [tuple(x) for x in new_charging_nodes]
-        new_cs_graph = G.subgraph(new_charging_nodes)
+        new_cs_graph = graph.subgraph(new_charging_nodes)
         nx.draw_networkx(
             new_cs_graph,
             ax=ax,
@@ -90,9 +100,9 @@ def output_image(G, pois, charging_stations, new_charging_nodes=[]):
     plt.show()
 
 
-def distance(a, b):
+def distance(a: Tuple[int, int], b: Tuple[int, int]) -> int:
     """
-    Calculate the distance between two points.
+    Calculate the distance between two points on a grid.
     """
     return (a[0] ** 2 - 2 * a[0] * b[0] + b[0] ** 2) + (
         a[1] ** 2 - 2 * a[1] * b[1] + b[1] ** 2
