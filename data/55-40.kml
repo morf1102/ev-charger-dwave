@@ -1,0 +1,2913 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<kml xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:atom="http://www.w3.org/2005/Atom" xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+<name>Extraction_LAMPADAIRE</name>
+<visibility>1</visibility>
+<Schema name="Lampadaires_selection2" id="kml_schema_ft_Lampadaires_selection2">
+<SimpleField type="xsd:string" name="NO_LAMPE">
+<displayName>NO_LAMPE</displayName>
+</SimpleField>
+<SimpleField type="xsd:string" name="X">
+<displayName>X</displayName>
+</SimpleField>
+<SimpleField type="xsd:string" name="Y">
+<displayName>Y</displayName>
+</SimpleField>
+<SimpleField type="xsd:string" name="VOLTAGE">
+<displayName>VOLTAGE</displayName>
+</SimpleField>
+<SimpleField type="xsd:string" name="SECTEUR">
+<displayName>SECTEUR</displayName>
+</SimpleField>
+<SimpleField type="xsd:string" name="NO_VOISIN">
+<displayName>NO_VOISIN</displayName>
+</SimpleField>
+<SimpleField type="xsd:string" name="DIST_VOISI">
+<displayName>DIST_VOISI</displayName>
+</SimpleField>
+</Schema>
+<Folder id="kml_ft_Lampadaires_selection2">
+<name>Lampadaires_selection2</name>
+<Placemark id="kml_1509">
+<name>kml_1509</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>115-8479</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371679.48</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5134347.47</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>120</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>115-8480</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>45</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">115-8479</SimpleData>
+<SimpleData name="X">371679.48</SimpleData>
+<SimpleData name="Y">5134347.47</SimpleData>
+<SimpleData name="VOLTAGE">120</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">115-8480</SimpleData>
+<SimpleData name="DIST_VOISI">45</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6311177661884,46.3455371684765,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1554">
+<name>kml_1554</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>4-401</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371451.97</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5134644.36</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>4-402</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>45</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">4-401</SimpleData>
+<SimpleData name="X">371451.97</SimpleData>
+<SimpleData name="Y">5134644.36</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">4-402</SimpleData>
+<SimpleData name="DIST_VOISI">45</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6340310002964,46.3482304307139,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1555">
+<name>kml_1555</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>4-402</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371420.67</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5134612.58</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>4-401</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>45</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">4-402</SimpleData>
+<SimpleData name="X">371420.67</SimpleData>
+<SimpleData name="Y">5134612.58</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">4-401</SimpleData>
+<SimpleData name="DIST_VOISI">45</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6344421280544,46.3479476142421,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1556">
+<name>kml_1556</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>4-403</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371389.15</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5134580.5</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>4-404</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>39</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">4-403</SimpleData>
+<SimpleData name="X">371389.15</SimpleData>
+<SimpleData name="Y">5134580.5</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">4-404</SimpleData>
+<SimpleData name="DIST_VOISI">39</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6348561525217,46.3476621197146,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1557">
+<name>kml_1557</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>4-404</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371361.74</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5134552.79</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>4-405</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>39</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">4-404</SimpleData>
+<SimpleData name="X">371361.74</SimpleData>
+<SimpleData name="Y">5134552.79</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">4-405</SimpleData>
+<SimpleData name="DIST_VOISI">39</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6352161603368,46.3474155320716,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1558">
+<name>kml_1558</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>4-405</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371334.37</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5134525.07</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>4-404</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>39</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">4-405</SimpleData>
+<SimpleData name="X">371334.37</SimpleData>
+<SimpleData name="Y">5134525.07</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">4-404</SimpleData>
+<SimpleData name="DIST_VOISI">39</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6355756469848,46.3471688498365,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1559">
+<name>kml_1559</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>4-406</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371306.22</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5134496.47</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>4-405</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>40</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">4-406</SimpleData>
+<SimpleData name="X">371306.22</SimpleData>
+<SimpleData name="Y">5134496.47</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">4-405</SimpleData>
+<SimpleData name="DIST_VOISI">40</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6359453881909,46.3469143258758,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1560">
+<name>kml_1560</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>4-407</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371277.59</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5134467.31</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>4-408</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>40</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">4-407</SimpleData>
+<SimpleData name="X">371277.59</SimpleData>
+<SimpleData name="Y">5134467.31</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">4-408</SimpleData>
+<SimpleData name="DIST_VOISI">40</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6363214405021,46.3466548105525,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1561">
+<name>kml_1561</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>4-408</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371249.49</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5134438.78</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>4-407</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>40</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">4-408</SimpleData>
+<SimpleData name="X">371249.49</SimpleData>
+<SimpleData name="Y">5134438.78</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">4-407</SimpleData>
+<SimpleData name="DIST_VOISI">40</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6366905147078,46.3464009089918,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1562">
+<name>kml_1562</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>4-409</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371221.35</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5134410.28</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>4-408</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>40</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">4-409</SimpleData>
+<SimpleData name="X">371221.35</SimpleData>
+<SimpleData name="Y">5134410.28</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">4-408</SimpleData>
+<SimpleData name="DIST_VOISI">40</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6370601013684,46.3461472802762,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1563">
+<name>kml_1563</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>4-410</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371189.8</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5134378.29</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>4-411</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>38</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">4-410</SimpleData>
+<SimpleData name="X">371189.8</SimpleData>
+<SimpleData name="Y">5134378.29</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">4-411</SimpleData>
+<SimpleData name="DIST_VOISI">38</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6374744751808,46.3458625882683,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1564">
+<name>kml_1564</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>4-411</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371163.48</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5134351.57</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>4-410</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>38</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">4-411</SimpleData>
+<SimpleData name="X">371163.48</SimpleData>
+<SimpleData name="Y">5134351.57</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">4-410</SimpleData>
+<SimpleData name="DIST_VOISI">38</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6378201604093,46.3456247919571,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1565">
+<name>kml_1565</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>4-412</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371137.11</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5134324.85</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>4-411</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>38</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">4-412</SimpleData>
+<SimpleData name="X">371137.11</SimpleData>
+<SimpleData name="Y">5134324.85</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">4-411</SimpleData>
+<SimpleData name="DIST_VOISI">38</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6381664920014,46.3453869989156,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1566">
+<name>kml_1566</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>4-413</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371109.06</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5134296.42</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>4-412</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>40</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">4-413</SimpleData>
+<SimpleData name="X">371109.06</SimpleData>
+<SimpleData name="Y">5134296.42</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">4-412</SimpleData>
+<SimpleData name="DIST_VOISI">40</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6385348856448,46.3451339862711,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1567">
+<name>kml_1567</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>4-414</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371080.94</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5134267.97</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>4-413</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>40</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">4-414</SimpleData>
+<SimpleData name="X">371080.94</SimpleData>
+<SimpleData name="Y">5134267.97</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">4-413</SimpleData>
+<SimpleData name="DIST_VOISI">40</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.63890418812,46.3448807991564,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1568">
+<name>kml_1568</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>4-415</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371049.33</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5134235.88</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>4-416</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>45</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">4-415</SimpleData>
+<SimpleData name="X">371049.33</SimpleData>
+<SimpleData name="Y">5134235.88</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">4-416</SimpleData>
+<SimpleData name="DIST_VOISI">45</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6393193370694,46.344595206755,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1569">
+<name>kml_1569</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>4-416</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371017.75</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5134203.82</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>4-415</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>45</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">4-416</SimpleData>
+<SimpleData name="X">371017.75</SimpleData>
+<SimpleData name="Y">5134203.82</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">4-415</SimpleData>
+<SimpleData name="DIST_VOISI">45</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6397340865929,46.3443098794586,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1570">
+<name>kml_1570</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>5-501</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371603.23</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5134416.71</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>5-536</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>17</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">5-501</SimpleData>
+<SimpleData name="X">371603.23</SimpleData>
+<SimpleData name="Y">5134416.71</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">5-536</SimpleData>
+<SimpleData name="DIST_VOISI">17</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6320984139785,46.3461675783718,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1571">
+<name>kml_1571</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>5-502</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371605.64</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5134391.69</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>5-501</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>25</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">5-502</SimpleData>
+<SimpleData name="X">371605.64</SimpleData>
+<SimpleData name="Y">5134391.69</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">5-501</SimpleData>
+<SimpleData name="DIST_VOISI">25</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.632070669984,46.3459422596116,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1572">
+<name>kml_1572</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>5-503</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371620.2</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5134354.46</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>5-502</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>40</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">5-503</SimpleData>
+<SimpleData name="X">371620.2</SimpleData>
+<SimpleData name="Y">5134354.46</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">5-502</SimpleData>
+<SimpleData name="DIST_VOISI">40</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6318868327863,46.3456058999619,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1573">
+<name>kml_1573</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>5-504</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371634.86</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5134317.18</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>5-505</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>40</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">5-504</SimpleData>
+<SimpleData name="X">371634.86</SimpleData>
+<SimpleData name="Y">5134317.18</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">5-505</SimpleData>
+<SimpleData name="DIST_VOISI">40</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6317017054362,46.3452690810001,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1574">
+<name>kml_1574</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>5-505</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371649</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5134280</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>5-504</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>40</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">5-505</SimpleData>
+<SimpleData name="X">371649</SimpleData>
+<SimpleData name="Y">5134280</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">5-504</SimpleData>
+<SimpleData name="DIST_VOISI">40</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6315233211972,46.3449332124296,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1575">
+<name>kml_1575</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>5-506</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371664.03</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5134242.77</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>5-507</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>40</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">5-506</SimpleData>
+<SimpleData name="X">371664.03</SimpleData>
+<SimpleData name="Y">5134242.77</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">5-507</SimpleData>
+<SimpleData name="DIST_VOISI">40</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6313333857338,46.344596805508,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1576">
+<name>kml_1576</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>5-507</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371678.56</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5134205.53</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>5-506</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>40</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">5-507</SimpleData>
+<SimpleData name="X">371678.56</SimpleData>
+<SimpleData name="Y">5134205.53</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">5-506</SimpleData>
+<SimpleData name="DIST_VOISI">40</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6311499481707,46.3442603581156,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1577">
+<name>kml_1577</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>5-508</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371693.24</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5134168.26</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>5-509</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>40</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">5-508</SimpleData>
+<SimpleData name="X">371693.24</SimpleData>
+<SimpleData name="Y">5134168.26</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">5-509</SimpleData>
+<SimpleData name="DIST_VOISI">40</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6309645691105,46.3439236254738,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1578">
+<name>kml_1578</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>5-509</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371707.68</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5134131.02</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>5-508</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>40</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">5-509</SimpleData>
+<SimpleData name="X">371707.68</SimpleData>
+<SimpleData name="Y">5134131.02</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">5-508</SimpleData>
+<SimpleData name="DIST_VOISI">40</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6307823054398,46.3435871863716,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1579">
+<name>kml_1579</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>5-510</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371722.31</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5134093.79</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>5-509</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>40</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">5-510</SimpleData>
+<SimpleData name="X">371722.31</SimpleData>
+<SimpleData name="Y">5134093.79</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">5-509</SimpleData>
+<SimpleData name="DIST_VOISI">40</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6305975744777,46.3432508182571,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1580">
+<name>kml_1580</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>5-511</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371730.2</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5134049.51</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>5-512</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>42</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">5-511</SimpleData>
+<SimpleData name="X">371730.2</SimpleData>
+<SimpleData name="Y">5134049.51</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">5-512</SimpleData>
+<SimpleData name="DIST_VOISI">42</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6305014019895,46.3428516929516,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1581">
+<name>kml_1581</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>5-512</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371717.76</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5134009.09</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>5-513</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>40</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">5-512</SimpleData>
+<SimpleData name="X">371717.76</SimpleData>
+<SimpleData name="Y">5134009.09</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">5-513</SimpleData>
+<SimpleData name="DIST_VOISI">40</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6306687565925,46.3424893008375,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1582">
+<name>kml_1582</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>5-513</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371693.43</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5133977.32</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>5-512</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>40</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">5-513</SimpleData>
+<SimpleData name="X">371693.43</SimpleData>
+<SimpleData name="Y">5133977.32</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">5-512</SimpleData>
+<SimpleData name="DIST_VOISI">40</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6309893197101,46.342205898535,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1583">
+<name>kml_1583</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>5-514</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371667.8</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5133946.57</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>5-515</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>40</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">5-514</SimpleData>
+<SimpleData name="X">371667.8</SimpleData>
+<SimpleData name="Y">5133946.57</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">5-515</SimpleData>
+<SimpleData name="DIST_VOISI">40</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.631326621012,46.3419317992065,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1584">
+<name>kml_1584</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>5-515</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371642.24</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5133915.85</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>5-516</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>40</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">5-515</SimpleData>
+<SimpleData name="X">371642.24</SimpleData>
+<SimpleData name="Y">5133915.85</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">5-516</SimpleData>
+<SimpleData name="DIST_VOISI">40</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6316630053206,46.3416579615373,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1585">
+<name>kml_1585</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>5-516</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371616.52</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5133885.31</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>5-515</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>40</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">5-516</SimpleData>
+<SimpleData name="X">371616.52</SimpleData>
+<SimpleData name="Y">5133885.31</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">5-515</SimpleData>
+<SimpleData name="DIST_VOISI">40</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6320014393553,46.3413857583982,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1586">
+<name>kml_1586</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>5-517</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371590.76</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5133854.66</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>5-518</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>40</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">5-517</SimpleData>
+<SimpleData name="X">371590.76</SimpleData>
+<SimpleData name="Y">5133854.66</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">5-518</SimpleData>
+<SimpleData name="DIST_VOISI">40</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6323404049695,46.3411125681765,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1587">
+<name>kml_1587</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>5-518</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371563.17</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5133825.94</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>5-517</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>40</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">5-518</SimpleData>
+<SimpleData name="X">371563.17</SimpleData>
+<SimpleData name="Y">5133825.94</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">5-517</SimpleData>
+<SimpleData name="DIST_VOISI">40</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6327028621851,46.3408569201161,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1588">
+<name>kml_1588</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>5-519</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371535.23</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5133797.21</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>5-520</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>40</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">5-519</SimpleData>
+<SimpleData name="X">371535.23</SimpleData>
+<SimpleData name="Y">5133797.21</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">5-520</SimpleData>
+<SimpleData name="DIST_VOISI">40</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6330698641067,46.3406012147468,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1589">
+<name>kml_1589</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>5-520</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371507.25</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5133768.55</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>5-521</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>40</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">5-520</SimpleData>
+<SimpleData name="X">371507.25</SimpleData>
+<SimpleData name="Y">5133768.55</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">5-521</SimpleData>
+<SimpleData name="DIST_VOISI">40</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6334373719224,46.3403461424403,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1590">
+<name>kml_1590</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>5-521</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371479.31</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5133739.97</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>5-520</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>40</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">5-521</SimpleData>
+<SimpleData name="X">371479.31</SimpleData>
+<SimpleData name="Y">5133739.97</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">5-520</SimpleData>
+<SimpleData name="DIST_VOISI">40</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6338043456869,46.3400917842745,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1591">
+<name>kml_1591</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>5-522</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371451.54</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5133711.17</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>5-521</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>40</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">5-522</SimpleData>
+<SimpleData name="X">371451.54</SimpleData>
+<SimpleData name="Y">5133711.17</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">5-521</SimpleData>
+<SimpleData name="DIST_VOISI">40</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6341691393944,46.3398354293036,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1592">
+<name>kml_1592</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>5-523</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371423.58</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5133682.45</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>5-524</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>40</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">5-523</SimpleData>
+<SimpleData name="X">371423.58</SimpleData>
+<SimpleData name="Y">5133682.45</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">5-524</SimpleData>
+<SimpleData name="DIST_VOISI">40</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6345363862535,46.3395798111049,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1593">
+<name>kml_1593</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>5-524</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371395.62</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5133653.9</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>5-525</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>40</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">5-524</SimpleData>
+<SimpleData name="X">371395.62</SimpleData>
+<SimpleData name="Y">5133653.9</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">5-525</SimpleData>
+<SimpleData name="DIST_VOISI">40</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6349036047692,46.3393257214146,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1594">
+<name>kml_1594</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>5-525</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371367.65</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5133625.37</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>5-524</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>40</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">5-525</SimpleData>
+<SimpleData name="X">371367.65</SimpleData>
+<SimpleData name="Y">5133625.37</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">5-524</SimpleData>
+<SimpleData name="DIST_VOISI">40</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6352709478501,46.3390718115968,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1595">
+<name>kml_1595</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>5-526</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371339.71</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5133596.68</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>5-527</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>40</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">5-526</SimpleData>
+<SimpleData name="X">371339.71</SimpleData>
+<SimpleData name="Y">5133596.68</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">5-527</SimpleData>
+<SimpleData name="DIST_VOISI">40</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6356379201768,46.3388164579347,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1596">
+<name>kml_1596</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>5-527</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371311.85</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5133568.09</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>5-526</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>40</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">5-527</SimpleData>
+<SimpleData name="X">371311.85</SimpleData>
+<SimpleData name="Y">5133568.09</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">5-526</SimpleData>
+<SimpleData name="DIST_VOISI">40</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6360038356088,46.3385619945955,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1597">
+<name>kml_1597</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>5-528</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371283.93</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5133539.47</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>5-527</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>40</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">5-528</SimpleData>
+<SimpleData name="X">371283.93</SimpleData>
+<SimpleData name="Y">5133539.47</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">5-527</SimpleData>
+<SimpleData name="DIST_VOISI">40</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6363705311715,46.3383072663394,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1598">
+<name>kml_1598</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>5-529</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371255.97</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5133510.77</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>5-530</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>40</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">5-529</SimpleData>
+<SimpleData name="X">371255.97</SimpleData>
+<SimpleData name="Y">5133510.77</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">5-530</SimpleData>
+<SimpleData name="DIST_VOISI">40</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.636737754704,46.3380518209582,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1599">
+<name>kml_1599</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>5-530</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371228.12</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5133482.07</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>5-529</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>40</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">5-530</SimpleData>
+<SimpleData name="X">371228.12</SimpleData>
+<SimpleData name="Y">5133482.07</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">5-529</SimpleData>
+<SimpleData name="DIST_VOISI">40</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6371035454775,46.3377963641249,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1600">
+<name>kml_1600</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>5-531</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371200.13</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5133453.5</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>5-530</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>40</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">5-531</SimpleData>
+<SimpleData name="X">371200.13</SimpleData>
+<SimpleData name="Y">5133453.5</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">5-530</SimpleData>
+<SimpleData name="DIST_VOISI">40</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6374711330239,46.3375420887914,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1601">
+<name>kml_1601</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>5-532</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371172.32</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5133424.74</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>5-531</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>40</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">5-532</SimpleData>
+<SimpleData name="X">371172.32</SimpleData>
+<SimpleData name="Y">5133424.74</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">5-531</SimpleData>
+<SimpleData name="DIST_VOISI">40</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6378364062272,46.3372860853345,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1681">
+<name>kml_1681</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>4-417</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>370979.34</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5134163.62</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>4-418</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>53</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">4-417</SimpleData>
+<SimpleData name="X">370979.34</SimpleData>
+<SimpleData name="Y">5134163.62</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">4-418</SimpleData>
+<SimpleData name="DIST_VOISI">53</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6402387019757,46.3439519894998,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1682">
+<name>kml_1682</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>4-418</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>370942.99</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5134125.59</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>4-417</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>53</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">4-418</SimpleData>
+<SimpleData name="X">370942.99</SimpleData>
+<SimpleData name="Y">5134125.59</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">4-417</SimpleData>
+<SimpleData name="DIST_VOISI">53</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.640716245118,46.343613417505,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1683">
+<name>kml_1683</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>4-419</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>370939.36</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5134056.53</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>4-420</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>45</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">4-419</SimpleData>
+<SimpleData name="X">370939.36</SimpleData>
+<SimpleData name="Y">5134056.53</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">4-420</SimpleData>
+<SimpleData name="DIST_VOISI">45</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6407731319641,46.3429925020276,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1684">
+<name>kml_1684</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>4-420</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>370972.23</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5134025.12</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>4-419</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>45</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">4-420</SimpleData>
+<SimpleData name="X">370972.23</SimpleData>
+<SimpleData name="Y">5134025.12</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">4-419</SimpleData>
+<SimpleData name="DIST_VOISI">45</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6403505907258,46.3427067258595,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1685">
+<name>kml_1685</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>4-421</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371005.95</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5133992.9</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>4-420</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>47</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">4-421</SimpleData>
+<SimpleData name="X">371005.95</SimpleData>
+<SimpleData name="Y">5133992.9</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">4-420</SimpleData>
+<SimpleData name="DIST_VOISI">47</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6399171273892,46.3424135777391,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1686">
+<name>kml_1686</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>4-422</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371041</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5133959.41</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>4-423</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>43</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">4-422</SimpleData>
+<SimpleData name="X">371041</SimpleData>
+<SimpleData name="Y">5133959.41</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">4-423</SimpleData>
+<SimpleData name="DIST_VOISI">43</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6394665709482,46.3421088733099,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1687">
+<name>kml_1687</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>4-423</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371071.87</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5133929.92</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>4-422</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>43</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">4-423</SimpleData>
+<SimpleData name="X">371071.87</SimpleData>
+<SimpleData name="Y">5133929.92</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">4-422</SimpleData>
+<SimpleData name="DIST_VOISI">43</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6390697509746,46.3418405603047,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1688">
+<name>kml_1688</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>4-424</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371103.23</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5133899.95</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>4-423</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>43</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">4-424</SimpleData>
+<SimpleData name="X">371103.23</SimpleData>
+<SimpleData name="Y">5133899.95</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">4-423</SimpleData>
+<SimpleData name="DIST_VOISI">43</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6386666380615,46.3415678794972,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1689">
+<name>kml_1689</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>4-425</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371135.71</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5133868.91</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>4-426</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>33</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">4-425</SimpleData>
+<SimpleData name="X">371135.71</SimpleData>
+<SimpleData name="Y">5133868.91</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">4-426</SimpleData>
+<SimpleData name="DIST_VOISI">33</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.638249132484,46.3412854623133,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1690">
+<name>kml_1690</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>4-426</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371159.67</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5133846.02</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>4-425</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>33</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">4-426</SimpleData>
+<SimpleData name="X">371159.67</SimpleData>
+<SimpleData name="Y">5133846.02</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">4-425</SimpleData>
+<SimpleData name="DIST_VOISI">33</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6379411461899,46.341077195797,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1691">
+<name>kml_1691</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>4-427</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371219.9</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5133836.72</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>4-428</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>52</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">4-427</SimpleData>
+<SimpleData name="X">371219.9</SimpleData>
+<SimpleData name="Y">5133836.72</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">4-428</SimpleData>
+<SimpleData name="DIST_VOISI">52</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6371601226742,46.3409876313229,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1692">
+<name>kml_1692</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>4-428</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371258.21</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5133871.94</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>4-429</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>46</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">4-428</SimpleData>
+<SimpleData name="X">371258.21</SimpleData>
+<SimpleData name="Y">5133871.94</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">4-429</SimpleData>
+<SimpleData name="DIST_VOISI">46</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6366575195705,46.3413007174294,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1693">
+<name>kml_1693</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>4-429</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371290.62</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5133904.91</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>4-430</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>36</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">4-429</SimpleData>
+<SimpleData name="X">371290.62</SimpleData>
+<SimpleData name="Y">5133904.91</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">4-430</SimpleData>
+<SimpleData name="DIST_VOISI">36</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6362318661025,46.3415941385019,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1694">
+<name>kml_1694</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>4-430</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371319.11</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5133927.67</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>4-429</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>36</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">4-430</SimpleData>
+<SimpleData name="X">371319.11</SimpleData>
+<SimpleData name="Y">5133927.67</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">4-429</SimpleData>
+<SimpleData name="DIST_VOISI">36</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6358585742801,46.3417960931649,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1695">
+<name>kml_1695</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>4-431</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371359.94</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5133903.14</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>4-430</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>48</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">4-431</SimpleData>
+<SimpleData name="X">371359.94</SimpleData>
+<SimpleData name="Y">5133903.14</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">4-430</SimpleData>
+<SimpleData name="DIST_VOISI">48</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6353316971257,46.341571409684,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1696">
+<name>kml_1696</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>4-432</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371395.44</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5133870.81</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>4-431</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>48</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">4-432</SimpleData>
+<SimpleData name="X">371395.44</SimpleData>
+<SimpleData name="Y">5133870.81</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">4-431</SimpleData>
+<SimpleData name="DIST_VOISI">48</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6348751641353,46.3412770789018,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1697">
+<name>kml_1697</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>4-433</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371432.57</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5133835.33</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>4-434</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>48</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">4-433</SimpleData>
+<SimpleData name="X">371432.57</SimpleData>
+<SimpleData name="Y">5133835.33</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">4-434</SimpleData>
+<SimpleData name="DIST_VOISI">48</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6343979108773,46.3409542476243,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1698">
+<name>kml_1698</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>4-434</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371467.43</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5133802.01</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>4-433</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>48</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">4-434</SimpleData>
+<SimpleData name="X">371467.43</SimpleData>
+<SimpleData name="Y">5133802.01</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">4-433</SimpleData>
+<SimpleData name="DIST_VOISI">48</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6339498418922,46.3406510695425,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1890">
+<name>kml_1890</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>5-534</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371643.61</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5134439.44</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>5-535</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>18</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">5-534</SimpleData>
+<SimpleData name="X">371643.61</SimpleData>
+<SimpleData name="Y">5134439.44</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">5-535</SimpleData>
+<SimpleData name="DIST_VOISI">18</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6315706234847,46.3463680764681,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1891">
+<name>kml_1891</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>5-535</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371640.61</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5134421.51</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>5-534</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>18</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">5-535</SimpleData>
+<SimpleData name="X">371640.61</SimpleData>
+<SimpleData name="Y">5134421.51</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">5-534</SimpleData>
+<SimpleData name="DIST_VOISI">18</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6316121491761,46.346207072579,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1892">
+<name>kml_1892</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>5-536</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371619.88</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5134413.11</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>5-501</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>17</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">5-536</SimpleData>
+<SimpleData name="X">371619.88</SimpleData>
+<SimpleData name="Y">5134413.11</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">5-501</SimpleData>
+<SimpleData name="DIST_VOISI">17</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6318826362923,46.3461335508332,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1893">
+<name>kml_1893</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>5-537</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371601.2</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5134462.51</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>5-533</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>21</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">5-537</SimpleData>
+<SimpleData name="X">371601.2</SimpleData>
+<SimpleData name="Y">5134462.51</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">5-533</SimpleData>
+<SimpleData name="DIST_VOISI">21</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6321182638761,46.3465797981003,0.0</coordinates>
+</Point>
+</Placemark>
+<Placemark id="kml_1894">
+<name>kml_1894</name>
+<snippet> </snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NO_LAMPE</th>
+<td>5-533</td>
+</tr><tr bgcolor="">
+<th>X</th>
+<td>371621.23</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>Y</th>
+<td>5134469.91</td>
+</tr><tr bgcolor="">
+<th>VOLTAGE</th>
+<td>240</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>SECTEUR</th>
+<td>Carrefour 40-55</td>
+</tr><tr bgcolor="">
+<th>NO_VOISIN</th>
+<td>5-537</td>
+</tr><tr bgcolor="#E3E3F3">
+<th>DIST_VOISI</th>
+<td>21</td>
+</tr></table></center>]]></description>
+<ExtendedData>
+<SchemaData schemaUrl="#kml_schema_ft_Lampadaires_selection2">
+<SimpleData name="NO_LAMPE">5-533</SimpleData>
+<SimpleData name="X">371621.23</SimpleData>
+<SimpleData name="Y">5134469.91</SimpleData>
+<SimpleData name="VOLTAGE">240</SimpleData>
+<SimpleData name="SECTEUR">Carrefour 40-55</SimpleData>
+<SimpleData name="NO_VOISIN">5-537</SimpleData>
+<SimpleData name="DIST_VOISI">21</SimpleData>
+</SchemaData>
+</ExtendedData>
+<Point>
+<coordinates>-72.6318570099958,46.3466443939089,0.0</coordinates>
+</Point>
+</Placemark>
+</Folder>
+</Document></kml>
