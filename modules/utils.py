@@ -50,6 +50,7 @@ def output_image(
         None. Output saved to file "map.png".
     """
     fig, ax = plt.subplots(figsize=(8, 8))
+    ax.axis("off")
     # fig.suptitle("New EV Charger Locations")
     pos = {x: [x[0], x[1]] for x in graph.nodes()}
 
