@@ -49,7 +49,7 @@ def output_image(
     Returns:
         None. Output saved to file "map.png".
     """
-    _, ax = plt.subplots(figsize=(8, 8))
+    fig, ax = plt.subplots(figsize=(8, 8))
     # fig.suptitle("New EV Charger Locations")
     pos = {x: [x[0], x[1]] for x in graph.nodes()}
 
@@ -96,8 +96,8 @@ def output_image(
             node_size=75,
         )
 
-    # Save image
-    plt.show()
+    plt.close()
+    return fig
 
 
 def distance(a: Tuple[int, int], b: Tuple[int, int]) -> int:
