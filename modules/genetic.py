@@ -3,13 +3,15 @@ from typing import List, Tuple, Optional
 
 import networkx as nx
 import numpy as np
+from scipy.spatial.distance import cdist
 
 from .utils import distance
 
 
 class GeneticAlgortihm:
     """
-    Genetic algorithm to solve the problem of finding the optimal locations for new charging stations.
+    Genetic algorithm to solve the problem of finding the optimal locations
+    for new charging stations.
     """
 
     def __init__(
@@ -24,6 +26,7 @@ class GeneticAlgortihm:
         crossover_rate: float = 0.5,
         generations: int = 500,
         seed: Optional[int] = None,
+        sigma: Optional[float] = None,
     ) -> None:
         """
         Initialize the genetic algorithm.
@@ -54,7 +57,7 @@ class GeneticAlgortihm:
         self.generations = generations
         self.population: List[List[Tuple[int, int]]] = []
         self.best_solution: Optional[List[Tuple[int, int]]] = None
-        self.best_fitness = np.inf
+        self.best_fitness = 0
         self.best_generation = 0
 
         # Set up scenario
@@ -63,6 +66,9 @@ class GeneticAlgortihm:
         self.charging_stations: Optional[List[Tuple[int, int]]] = None
         self.potential_new_cs_nodes: Optional[List[Tuple[int, int]]] = None
         self.set_up_scenario(width, height, num_poi, num_cs)
+
+        # Calculate sigma value for fitness function
+        self.sigma = sigma if sigma is not None else self.__get_sigma()
 
     def set_up_scenario(
         self, width: int, height: int, num_poi: int, num_cs: int
@@ -92,11 +98,21 @@ class GeneticAlgortihm:
         Initialize the population with random coordinates.
         """
         self.population = [
-            random.choices(self.potential_new_cs_nodes, k=(self.num_new_cs))
+            random.choices(self.potential_new_cs_nodes, k=self.num_new_cs)
             for _ in range(self.pop_size)
         ]
 
-    def fitness(self, new_charging_nodes: List[Tuple[int, int]]) -> float:
+    def __get_sigma(self) -> float:
+        """
+        Calculate the sigma value for the fitness function.
+
+        Returns:
+            float: The sigma value.
+        """
+        avg_dist = np.mean(cdist(self.pois, self.charging_stations, "cityblock"))
+        return avg_dist / np.sqrt(2 * np.log(1000))
+
+    def fitness_old(self, new_charging_nodes: List[Tuple[int, int]]) -> float:
         """
         Calculate the fitness of a solution.
 
@@ -113,6 +129,30 @@ class GeneticAlgortihm:
             )
         return min_dist.sum()
 
+    def fitness(self, new_charging_nodes: List[Tuple[int, int]]) -> float:
+        """
+        Calculate the fitness of the solution scenario.
+
+        Args:
+            new_charging_nodes (List[Tuple[int, int]]): The solution to evaluate.
+
+        Returns:
+            float: The fitness of the solution.
+        """
+        cs = self.charging_stations + new_charging_nodes
+
+        pois_influence_matrix = self.__influence_matrix(self.pois, cs)
+        cs_influence_matrix = self.__influence_matrix(cs, cs)
+
+        total_influence = np.sum(pois_influence_matrix) / np.sum(
+            cs_influence_matrix
+        )
+        return total_influence
+
+    def __influence_matrix(self, x, y):
+        dist_matrix = cdist(x, y, "cityblock")
+        return np.exp(-(dist_matrix**2) / (2 * self.sigma**2))
+
     def tournament_selection(self, k: int = 2) -> List[Tuple[int, int]]:
         """
         Perform a tournament selection to select a parent.
@@ -124,7 +164,7 @@ class GeneticAlgortihm:
             List[Tuple[int, int]]: The selected parent.
         """
         selected = random.choices(self.population, k=k)
-        return min(selected, key=self.fitness)
+        return max(selected, key=self.fitness)
 
     def crossover(
         self, parent1: List[Tuple[int, int]], parent2: List[Tuple[int, int]]
@@ -209,7 +249,7 @@ class GeneticAlgortihm:
             self.population = new_population
             for candidate in self.population:
                 fit = self.fitness(candidate)
-                if fit < self.best_fitness:
+                if fit > self.best_fitness:
                     self.best_fitness = fit
                     self.best_solution = candidate
                     self.best_generation = gen
