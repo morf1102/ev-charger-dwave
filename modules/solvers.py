@@ -252,7 +252,9 @@ class QuantumAnnealing(EVCP):
         Returns:
             np.array: Best hyperparameters found.
         """
-        assert isinstance(self.sampler, SimulatedAnnealingSampler), "Sampler must be a SimulatedAnnealingSampler"
+        assert isinstance(
+            self.sampler, SimulatedAnnealingSampler
+        ), "Sampler must be a SimulatedAnnealingSampler"
 
         # Define the objective function
         def objective(hyperparams):
