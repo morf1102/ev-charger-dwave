@@ -9,15 +9,14 @@ from scipy.spatial.distance import cdist
 from .utils import influence_matrix
 
 
-class ECVP:
+class EVCP:
     """
     Class to set up and visualize a scenario for electric vehicle charging station placement.
     """
 
     def __init__(
         self,
-        width: int,
-        height: int,
+        shape: Tuple[int, int],
         num_poi: int,
         num_cs: int,
         num_new_cs: int,
@@ -34,11 +33,10 @@ class ECVP:
             num_new_cs (int): The number of new charging stations to place.
             seed (int, optional): Random seed for reproducibility. Defaults to None.
         """
-        # Set random seed
+        # Set random seed for reproducibility
         random.seed(seed)
 
-        self.width = width
-        self.height = height
+        self.width, self.height = shape
         self.num_cs = num_cs
         self.num_new_cs = num_new_cs
         self.num_poi = num_poi
@@ -46,13 +44,13 @@ class ECVP:
         self.sigma = 1
         self.pois = []
         self.charging_stations = []
-        self.potential_new_cs_nodes = []
+        self.potential_nodes = []
         self.new_charging_nodes = []
 
-        self.set_up_scenario()
-        self.get_sigma()
+        self.__set_up_scenario()
+        self.__get_sigma()
 
-    def set_up_scenario(self) -> None:
+    def __set_up_scenario(self) -> None:
         """
         Build scenario set up with specified parameters.
 
@@ -62,6 +60,7 @@ class ECVP:
             num_poi (int): Number of points of interest.
             num_cs (int): Number of existing charging stations.
         """
+
         # Create a grid graph
         self.graph = nx.grid_2d_graph(self.width, self.height)
         nodes = list(self.graph.nodes)
@@ -71,7 +70,9 @@ class ECVP:
         self.charging_stations = random.sample(nodes, k=self.num_cs)
 
         # Identify potential new charging locations
-        self.potential_new_cs_nodes = list(self.graph.nodes() - self.charging_stations)
+        self.potential_nodes = list(
+            self.graph.nodes() - set(self.charging_stations) - set(self.pois)
+        )
 
     def draw_grid(self) -> plt.Figure:
         """
@@ -124,7 +125,7 @@ class ECVP:
         plt.close()
         return fig
 
-    def get_sigma(self) -> float:
+    def __get_sigma(self) -> float:
         """
         Calculate the sigma value for the fitness function.
 
@@ -149,5 +150,7 @@ class ECVP:
         pois_influence_matrix = influence_matrix(self.pois, cs, self.sigma)
         cs_influence_matrix = influence_matrix(cs, cs, self.sigma)
 
-        total_influence = np.sum(pois_influence_matrix) / np.sum(cs_influence_matrix)
+        total_influence = (
+            100 * np.sum(pois_influence_matrix) / np.sum(cs_influence_matrix)
+        )
         return total_influence
