@@ -23,7 +23,7 @@ class QuantumAnnealing(EVCP):
         num_poi: int,
         num_cs: int,
         num_new_cs: int,
-        hyperparams: ArrayLike = np.array([4, 3, 3, 3]),
+        hyperparams: ArrayLike = [2, 7, 7, 2],
         sampler=SimulatedAnnealingSampler(),
         seed: Optional[int] = None,
     ) -> None:
