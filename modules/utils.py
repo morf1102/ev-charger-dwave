@@ -40,10 +40,10 @@ def distance(a: Tuple[int, int], b: Tuple[int, int]) -> int:
 
 
 def influence_matrix(
-    x: Tuple[int, int], y: Tuple[int, int], sigma: Union[float, int] = 1
+    x: List[Tuple[int, int]], y: List[Tuple[int, int]], sigma: Union[float, int] = 1
 ):
     """
-    Calculate the influence matrix between two sets of coordinates.
+    Calculate the gaussian influence matrix between two sets of coordinates.
 
     Args:
         x (Tuple[int, int]): The first set of coordinates.
@@ -51,7 +51,7 @@ def influence_matrix(
         sigma (Union[float, int], optional): The sigma value. Defaults to 1.
 
     Returns:
-        np.ndarray: The influence matrix.
+        np.ndarray: The gaussian influence matrix.
     """
     dist_matrix = cdist(x, y, "cityblock")
-    return np.exp(-(dist_matrix**2) / (2 * sigma**2))
+    return np.exp(-np.divide(np.square(dist_matrix), 2 * sigma**2))
