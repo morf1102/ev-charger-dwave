@@ -1,32 +1,30 @@
 import random
-from typing import List, Tuple, Optional, Union
+from typing import List, Tuple, Optional
 from itertools import combinations
 
 import numpy as np
+from numpy.typing import ArrayLike
 import dimod
 from dwave.samplers import SimulatedAnnealingSampler
 from scipy.optimize import minimize
-from scipy.spatial.distance import cityblock
 
-from .evcp import ECVP
+from .utils import influence_matrix
+from .evcp import EVCP
 
 
-class QuantumAnnealing(ECVP):
+class QuantumAnnealing(EVCP):
     """
     Quantum annealing to solve the problem of finding the optimal locations
     """
 
     def __init__(
         self,
-        width: int,
-        height: int,
+        shape: Tuple[int, int],
         num_poi: int,
         num_cs: int,
         num_new_cs: int,
-        hyperparams: np.array = np.array([4, 3, 3, 3]),
-        sampler: Union[SimulatedAnnealingSampler] = SimulatedAnnealingSampler(),
-        num_reads: Optional[int] = None,
-        num_sweeps: Optional[int] = None,
+        hyperparams: ArrayLike = np.array([4, 3, 3, 3]),
+        sampler=SimulatedAnnealingSampler(),
         seed: Optional[int] = None,
     ) -> None:
         """
@@ -42,67 +40,61 @@ class QuantumAnnealing(ECVP):
             num_sweeps (int, optional): Number of sweeps. Defaults to 1000.
             seed (int, optional): Random seed. Defaults to None.
         """
-        # Random seed
-        random.seed(seed)
+        # Initialize the scenario
+        super().__init__(shape, num_poi, num_cs, num_new_cs, seed=seed)
 
-        super().__init__(width, height, num_poi, num_cs, num_new_cs)
-
-        self.hyperparams = hyperparams
+        # Set up parameters
+        self.hyperparams = np.asarray(hyperparams, dtype=float)
         self.sampler = sampler
-        self.num_reads = num_reads
-        self.num_sweeps = num_sweeps
 
-    def build_bqm(self, hyperparams=None):
-        """Build bqm that models our problem scenario for the hybrid sampler.
+    def build_bqm(self, hyperparams: ArrayLike = None):
+        """
+        Build the binary quadratic model for the problem scenario.
 
         Args:
-            potential_new_cs_nodes (list of tuples of ints):
-                Potential new charging locations
-            num_poi (int): Number of points of interest
-            pois (list of tuples of ints): A fixed set of points of interest
-            num_cs (int): Number of existing charging stations
-            charging_stations (list of tuples of ints):
-                Set of current charging locations
-            num_new_cs (int): Number of new charging stations desired
+            hyperparams (ArrayLike, optional): The hyperparameters.
 
         Returns:
-            bqm_np (BinaryQuadraticModel): QUBO model for the input scenario
+            BinaryQuadraticModel: The binary quadratic model for the problem scenario.
         """
+        # Asserts for input validation
+        assert self.num_new_cs > 0, "Number of new charging stations must be > 0"
+        assert self.num_poi > 0, "Number of POIs must be > 0"
+        assert self.num_cs > 0, "Number of existing charging stations must be > 0"
 
-        a, b, c, d = hyperparams if hyperparams is not None else self.hyperparams
+        # Unpack hyperparameters
+        if hyperparams is not None:
+            a, b, c, d = np.asarray(hyperparams, dtype=float)
+            assert len(hyperparams) == 4, "Hyperparameters must be of length 4"
+        else:
+            a, b, c, d = self.hyperparams
 
-        # Tunable parameters
-        alpha = len(self.potential_new_cs_nodes) * a  # 4
-        beta = len(self.potential_new_cs_nodes) / b  # 3
-        gamma = len(self.potential_new_cs_nodes) * c  # 1.7
-        delta = len(self.potential_new_cs_nodes) ** d  # 3
+        # Compute coefficients for the objective functions
+        num_nodes = len(self.potential_nodes)
+        alpha = a
+        beta = b
+        gamma = c
+        delta = d
 
-        # Build BQM using adjVectors to find best new charging location s.t. min
-        # distance to POIs and max distance to existing charging locations
-        bqm = dimod.BinaryQuadraticModel(len(self.potential_new_cs_nodes), "BINARY")
+        # Initialize the binary quadratic model
+        bqm = dimod.BinaryQuadraticModel(num_nodes, "BINARY")
 
         # Constraint 1: Min average distance to POIs
-        if self.num_poi > 0:
-            for i, cand_loc in enumerate(self.potential_new_cs_nodes):
-                # Compute average distance to POIs from this node
-                avg_dist = sum(cityblock(cand_loc, loc) for loc in self.pois)
-                bqm.add_linear(i, avg_dist * np.log2(avg_dist) * alpha)
+        for i, cand_loc in enumerate(self.potential_nodes):
+            dist = np.sum(influence_matrix(self.pois, [cand_loc], self.sigma))
+            bqm.add_linear(i, -dist * alpha)
 
         # Constraint 2: Max distance to existing chargers
-        if self.num_cs > 0:
-            for i, cand_loc in enumerate(self.potential_new_cs_nodes):
-                # Compute average distance to POIs from this node
-                avg_dist = sum(
-                    cityblock(cand_loc, loc) for loc in self.charging_stations
-                )
-                bqm.add_linear(i, avg_dist * beta)
+        for i, cand_loc in enumerate(self.potential_nodes):
+            dist = np.sum(
+                influence_matrix(self.charging_stations, [cand_loc], self.sigma)
+            )
+            bqm.add_linear(i, dist * beta)
 
         # Constraint 3: Max distance to other new charging locations
-        if self.num_new_cs > 1:
-            for (i, ai), (j, aj) in combinations(
-                enumerate(self.potential_new_cs_nodes), 2
-            ):
-                bqm.add_interaction(i, j, -cityblock(ai, aj) * gamma)
+        for (i, ai), (j, aj) in combinations(enumerate(self.potential_nodes), 2):
+            dist = np.sum(influence_matrix([ai], [aj], self.sigma))
+            bqm.add_interaction(i, j, dist * gamma)
 
         # Constraint 4: Choose exactly num_new_cs new charging locations
         bqm.update(
@@ -112,7 +104,102 @@ class QuantumAnnealing(ECVP):
         )
         return bqm
 
-    def run_bqm_and_collect_solutions(self, bqm, **kwargs):
+    def build_bqm_numpy(self, hyperparams: ArrayLike = None):
+        """
+        Build the binary quadratic model for the problem scenario using numpy vectors.
+
+        Args:
+            hyperparams (ArrayLike, optional): The hyperparameters.
+
+        Returns:
+            BinaryQuadraticModel: The binary quadratic model for the problem scenario.
+        """
+        # Asserts for input validation
+        assert self.num_new_cs > 0, "Number of new charging stations must be > 0"
+        assert self.num_poi > 0, "Number of POIs must be > 0"
+        assert self.num_cs > 0, "Number of existing charging stations must be > 0"
+
+        # Unpack hyperparameters
+        if hyperparams is not None:
+            alpha, beta, gamma, delta = np.asarray(hyperparams, dtype=float)
+            assert len(hyperparams) == 4, "Hyperparameters must be of length 4"
+        else:
+            alpha, beta, gamma, delta = self.hyperparams
+
+        # Linear coefficients
+        linear = self.__build_linear(alpha, beta)
+
+        # Quadratic coefficients
+        quadratic = self.__build_quadratic(gamma)
+
+        # Create the binary quadratic model
+        bqm = dimod.BinaryQuadraticModel.from_numpy_vectors(
+            linear, quadratic, 0, dimod.BINARY
+        )
+        # Constraint 4: Choose exactly num_new_cs new charging locations
+        bqm.update(
+            dimod.generators.combinations(
+                bqm.variables, self.num_new_cs, strength=delta
+            )
+        )
+        return bqm
+
+    def __build_linear(self, alpha: float, beta: float) -> np.ndarray:
+        """
+        Build the linear coefficients for the QUBO model.
+
+        Args:
+            alpha (float): The alpha value.
+            beta (float): The beta value.
+
+        Returns:
+            np.ndarray: The linear coefficients.
+        """
+        # Initialize the binary quadratic model
+        num_nodes = len(self.potential_nodes)
+        linear = np.zeros(num_nodes)
+
+        # Constraint 1: Min average distance to POIs
+        dist_pois = influence_matrix(self.pois, self.potential_nodes, self.sigma)
+        linear -= np.sum(dist_pois, axis=0) * alpha
+
+        # Constraint 2: Max distance to existing chargers
+        dist_cs = influence_matrix(
+            self.charging_stations, self.potential_nodes, self.sigma
+        )
+        linear += np.sum(dist_cs, axis=0) * beta
+        return linear
+
+    def __build_quadratic(self, gamma: float) -> np.ndarray:
+        """
+        Build the quadratic coefficients for the QUBO model.
+
+        Args:
+            gamma (float): The gamma value.
+
+        Returns:
+            np.ndarray: The quadratic coefficients.
+        """
+        num_nodes = len(self.potential_nodes)
+
+        # Compute the distance matrix between potential new charging locations
+        dist_new_cs = gamma * influence_matrix(
+            self.potential_nodes, self.potential_nodes, self.sigma
+        )
+
+        # Create quadratic coefficients
+        quad_row = np.tile(np.arange(num_nodes), (num_nodes, 1)).flatten("F")
+        quad_col = np.tile(np.arange(num_nodes), num_nodes)
+        dist_new_cs = np.triu(dist_new_cs, 1).flatten()
+
+        # Remove zero values from the quadratic coefficients
+        q1 = quad_row[dist_new_cs != 0]
+        q2 = quad_col[dist_new_cs != 0]
+        q3 = dist_new_cs[dist_new_cs != 0]
+
+        return q1, q2, q3
+
+    def run_bqm(self, bqm, **kwargs):
         """Solve the bqm with the provided sampler to find new charger locations.
 
         Args:
@@ -126,13 +213,9 @@ class QuantumAnnealing(ECVP):
             new_charging_nodes (list of tuples of ints):
                 Locations of new charging stations
         """
-
-        sampleset = self.sampler.sample(bqm, num_reads=self.num_reads, **kwargs)
-        ss = sampleset.first.sample
-        new_charging_nodes = [
-            self.potential_new_cs_nodes[k] for k, v in ss.items() if v == 1
-        ]
-        return sampleset, new_charging_nodes
+        # Run the sampler
+        sampleset = self.sampler.sample(bqm, **kwargs)
+        return sampleset
 
     def score_sampleset(self, sampleset) -> float:
         """
@@ -140,18 +223,26 @@ class QuantumAnnealing(ECVP):
         """
         n_samples = len(sampleset)
 
+        # Extract the new charging nodes from the sampleset
         new_charging_nodes = [
-            [self.potential_new_cs_nodes[k] for k, v in sample.items() if v == 1]
+            [self.potential_nodes[k] for k, v in sample.items() if v == 1]
             for sample in sampleset
         ]
 
+        # Calculate the score for each sample
         score = np.zeros(n_samples)
+        best_score = 0
         for i, new_cs in enumerate(new_charging_nodes):
             score[i] = self.fitness(new_cs)
-        total_score = np.mean(score) + np.var(score)
+            if score[i] > best_score:
+                best_score = score[i]
+                self.new_charging_nodes = new_cs
+        total_score = np.mean(score) - np.var(score)
         return total_score
 
-    def search_hyperparams(self, init_guess):
+    def search_hyperparams(
+        self, init_guess: ArrayLike = np.array([4, 3, 3, 3]), **kwargs
+    ) -> np.ndarray:
         """
         Search for the best hyperparameters for the quantum annealing algorithm.
 
@@ -161,22 +252,24 @@ class QuantumAnnealing(ECVP):
         Returns:
             np.array: Best hyperparameters found.
         """
-        init_guess += 100
 
+        # Define the objective function
         def objective(hyperparams):
             bqm = self.build_bqm(hyperparams=hyperparams - 100)
-            sampleset, _ = self.run_bqm_and_collect_solutions(bqm)
+            sampleset = self.run_bqm(bqm, **kwargs)
             score = self.score_sampleset(sampleset)
             return -score
 
+        # Optimize the hyperparameters
+        init_guess = np.asarray(init_guess, dtype=float) + 100
         best_result = minimize(
-            objective, init_guess, method="Nelder-Mead", bounds=[(101, 1000)] * 4
+            objective, init_guess, method="Nelder-Mead", bounds=[(100, 1000)] * 4
         )
         best_params = best_result.x - 100
         return best_params
 
 
-class GeneticAlgortihm(ECVP):
+class GeneticAlgortihm(EVCP):
     """
     Genetic algorithm to solve the problem of finding the optimal locations
     for new charging stations.
@@ -184,8 +277,7 @@ class GeneticAlgortihm(ECVP):
 
     def __init__(
         self,
-        width: int,
-        height: int,
+        shape: Tuple[int, int],
         num_poi: int,
         num_cs: int,
         num_new_cs: int,
@@ -193,6 +285,7 @@ class GeneticAlgortihm(ECVP):
         mutation_rate: float = 0.1,
         crossover_rate: float = 0.5,
         generations: int = 500,
+        seed: Optional[int] = None,
     ) -> None:
         """
         Initialize the genetic algorithm.
@@ -209,7 +302,8 @@ class GeneticAlgortihm(ECVP):
             generations (int, optional): Number of generations. Defaults to 500.
             seed (int, optional): Random seed. Defaults to None.
         """
-        super().__init__(width, height, num_poi, num_cs, num_new_cs)
+        # Initialize the scenario
+        super().__init__(shape, num_poi, num_cs, num_new_cs, seed=seed)
 
         # Set up parameters
         self.pop_size = pop_size
@@ -220,16 +314,18 @@ class GeneticAlgortihm(ECVP):
         self.best_fitness = 0
         self.best_generation = 0
 
-    def init_population(self) -> None:
+        self.__init_population()
+
+    def __init_population(self) -> None:
         """
         Initialize the population with random coordinates.
         """
         self.population = [
-            random.choices(self.potential_new_cs_nodes, k=self.num_new_cs)
+            random.choices(self.potential_nodes, k=self.num_new_cs)
             for _ in range(self.pop_size)
         ]
 
-    def tournament_selection(self, k: int = 2) -> List[Tuple[int, int]]:
+    def __tournament_selection(self, k: int = 2) -> List[Tuple[int, int]]:
         """
         Perform a tournament selection to select a parent.
 
@@ -242,7 +338,7 @@ class GeneticAlgortihm(ECVP):
         selected = random.choices(self.population, k=k)
         return max(selected, key=self.fitness)
 
-    def crossover(
+    def __crossover(
         self, parent1: List[Tuple[int, int]], parent2: List[Tuple[int, int]]
     ) -> List[Tuple[int, int]]:
         """
@@ -273,7 +369,7 @@ class GeneticAlgortihm(ECVP):
 
         return unique_child
 
-    def mutate(self, child: List[Tuple[int, int]]) -> List[Tuple[int, int]]:
+    def __mutate(self, child: List[Tuple[int, int]]) -> List[Tuple[int, int]]:
         """
         Mutate a child by randomly changing the coordinates, ensuring they are not on POIs.
 
@@ -309,24 +405,30 @@ class GeneticAlgortihm(ECVP):
         """
         Run the genetic algorithm to solve the problem.
         """
-        # Initialize the population
-        self.init_population()
         for gen in range(self.generations):
             new_population: List[List[Tuple[int, int]]] = []
+
+            # Select parents and perform crossovers and/or mutations
             for _ in range(self.pop_size):
-                parent1 = self.tournament_selection()
+                parent1 = self.__tournament_selection()
                 if random.random() < self.crossover_rate:
-                    parent2 = self.tournament_selection()
-                    child = self.crossover(parent1, parent2)
+                    parent2 = self.__tournament_selection()
+                    child = self.__crossover(parent1, parent2)
                 else:
                     child = parent1
-                child = self.mutate(child)
+                child = self.__mutate(child)
                 new_population.append(child)
+
+            # Update the population
             self.population = new_population
+
+            # Update the best solution found so far
             for candidate in self.population:
                 fit = self.fitness(candidate)
                 if fit > self.best_fitness:
                     self.best_fitness = fit
                     self.new_charging_nodes = candidate
                     self.best_generation = gen
+
+        # Ensure the new charging nodes are in the correct format
         self.new_charging_nodes = [tuple(node) for node in self.new_charging_nodes]
