@@ -7,28 +7,6 @@ import numpy as np
 from scipy.spatial.distance import cdist
 
 
-def load_data(folder_path: str) -> gpd.GeoDataFrame:
-    """
-    Load all geojson files in the folder_path and return a GeoDataFrame with all the data
-
-    Args:
-        folder_path (str): Path to the folder containing the geojson files
-
-    Returns:
-        gpd.GeoDataFrame: A GeoDataFrame containing all the data from the geojson files
-    """
-    gdf = []
-    for file in os.listdir(folder_path):
-        if file.endswith(".geojson") and file != "lightposts_curated.geojson":
-            if folder_path[-1] != "/":
-                folder_path += "/"
-            temp = gpd.read_file(folder_path + file).drop(columns=["description", "id"])
-            gdf.append(temp)
-
-    gdf = pd.concat(gdf)
-    return gdf
-
-
 def distance(a: Tuple[int, int], b: Tuple[int, int]) -> int:
     """
     Calculate the distance between two points on a grid.
