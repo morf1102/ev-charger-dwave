@@ -91,15 +91,14 @@ class EVCP:
         """
         fig, ax = plt.subplots(figsize=(8, 8))
         ax.axis("off")
-        # fig.suptitle("New EV Charger Locations")
-        pos = {x: [x[0], x[1]] for x in self.graph.nodes()}
 
-        # Locate POIs in map
+        pos = {x: x for x in self.graph.nodes()}
+
+        # Locate POIs and existing charging stations in map
         poi_graph = self.graph.subgraph(self.pois)
-
-        # Locate old charging stations in map
         cs_graph = self.graph.subgraph(self.charging_stations)
 
+        # Draw the grid graph
         nx.draw_networkx(
             self.graph, ax=ax, pos=pos, with_labels=False, node_color="k", node_size=3
         )
