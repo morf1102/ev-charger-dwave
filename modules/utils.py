@@ -4,8 +4,8 @@ import numpy as np
 from scipy.spatial.distance import cdist
 
 
-def influence_matrix(
-    x: List[Tuple[int, int]], y: List[Tuple[int, int]], sigma: float = 1.
+def gaussian_distance_matrix(
+    x: List[Tuple[int, int]], y: List[Tuple[int, int]], sigma: float = 1.0
 ):
     """
     Calculate the gaussian influence matrix between two sets of coordinates.

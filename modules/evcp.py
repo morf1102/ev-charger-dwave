@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy.spatial.distance import cdist
 
-from .utils import influence_matrix
+from .utils import gaussian_distance_matrix
 
 
 class EVCP:
@@ -146,10 +146,16 @@ class EVCP:
         """
         cs = np.append(self.charging_stations, new_charging_nodes, axis=0)
 
-        pois_influence_matrix = influence_matrix(self.pois, cs, self.sigma)
-        cs_influence_matrix = influence_matrix(cs, new_charging_nodes, self.sigma)
+        pois_gaussian_distance_matrix = gaussian_distance_matrix(
+            self.pois, cs, self.sigma
+        )
+        cs_gaussian_distance_matrix = gaussian_distance_matrix(
+            cs, new_charging_nodes, self.sigma
+        )
 
         total_influence = (
-            100 * np.sum(pois_influence_matrix) / np.sum(cs_influence_matrix)
+            100
+            * np.sum(pois_gaussian_distance_matrix)
+            / np.sum(cs_gaussian_distance_matrix)
         )
         return total_influence
