@@ -147,7 +147,7 @@ class EVCP:
         cs = np.append(self.charging_stations, new_charging_nodes, axis=0)
 
         pois_influence_matrix = influence_matrix(self.pois, cs, self.sigma)
-        cs_influence_matrix = influence_matrix(cs, cs, self.sigma)
+        cs_influence_matrix = influence_matrix(cs, new_charging_nodes, self.sigma)
 
         total_influence = (
             100 * np.sum(pois_influence_matrix) / np.sum(cs_influence_matrix)
