@@ -1,11 +1,12 @@
 import random
-from typing import List, Tuple, Optional
+from typing import List, Tuple, Optional, Union
 from itertools import combinations
 
 import numpy as np
 from numpy.typing import ArrayLike
 import dimod
 from dwave.samplers import SimulatedAnnealingSampler
+from dwave.system import LeapHybridSampler
 from scipy.optimize import minimize
 
 from .utils import influence_matrix
@@ -23,8 +24,10 @@ class QuantumAnnealing(EVCP):
         num_poi: int,
         num_cs: int,
         num_new_cs: int,
-        hyperparams: ArrayLike = [2, 7, 7, 2],
-        sampler=SimulatedAnnealingSampler(),
+        hyperparams: ArrayLike = [2, 6, 7, 2],
+        sampler: Union[
+            SimulatedAnnealingSampler, LeapHybridSampler
+        ] = SimulatedAnnealingSampler(),
         seed: Optional[int] = None,
     ) -> None:
         """
@@ -228,7 +231,6 @@ class QuantumAnnealing(EVCP):
             [self.potential_nodes[k] for k, v in sample.items() if v == 1]
             for sample in sampleset
         ]
-
         # Calculate the score for each sample
         score = np.zeros(n_samples)
         best_score = 0
@@ -241,7 +243,7 @@ class QuantumAnnealing(EVCP):
         return total_score
 
     def search_hyperparams(
-        self, init_guess: ArrayLike = np.array([4, 3, 3, 3]), **kwargs
+        self, init_guess: ArrayLike = [2, 6, 7, 2], **kwargs
     ) -> np.ndarray:
         """
         Search for the best hyperparameters for the quantum annealing algorithm.
@@ -258,17 +260,16 @@ class QuantumAnnealing(EVCP):
 
         # Define the objective function
         def objective(hyperparams):
-            bqm = self.build_bqm(hyperparams=hyperparams - 100)
+            print(f"Trying hyperparameters: {hyperparams}")
+            bqm = self.build_bqm(hyperparams=hyperparams)
             sampleset = self.run_bqm(bqm, **kwargs)
             score = self.score_sampleset(sampleset)
             return -score
 
         # Optimize the hyperparameters
-        init_guess = np.asarray(init_guess, dtype=float) + 100
-        best_result = minimize(
-            objective, init_guess, method="Nelder-Mead", bounds=[(100, 1000)] * 4
-        )
-        best_params = best_result.x - 100
+        init_guess = np.asarray(init_guess, dtype=float)
+        best_result = minimize(objective, init_guess, method="Nelder-Mead")
+        best_params = best_result.x
         return best_params
 
 
