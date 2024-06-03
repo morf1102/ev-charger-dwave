@@ -9,7 +9,7 @@ from dwave.samplers import SimulatedAnnealingSampler
 from dwave.system import LeapHybridSampler
 from scipy.optimize import minimize
 
-from .utils import gaussian_distance_matrix
+from .utils import gaussian_influence_matrix
 from .evcp import EVCP
 
 
@@ -84,19 +84,21 @@ class QuantumAnnealing(EVCP):
 
         # Constraint 1: Min average distance to POIs
         for i, cand_loc in enumerate(self.potential_nodes):
-            dist = np.sum(gaussian_distance_matrix(self.pois, [cand_loc], self.sigma))
+            dist = np.sum(gaussian_influence_matrix(self.pois, [cand_loc], self.sigma))
             bqm.add_linear(i, -dist * alpha)
 
         # Constraint 2: Max distance to existing chargers
         for i, cand_loc in enumerate(self.potential_nodes):
             dist = np.sum(
-                gaussian_distance_matrix(self.charging_stations, [cand_loc], self.sigma)
+                gaussian_influence_matrix(
+                    self.charging_stations, [cand_loc], self.sigma
+                )
             )
             bqm.add_linear(i, dist * beta)
 
         # Constraint 3: Max distance to other new charging locations
         for (i, ai), (j, aj) in combinations(enumerate(self.potential_nodes), 2):
-            dist = np.sum(gaussian_distance_matrix([ai], [aj], self.sigma))
+            dist = np.sum(gaussian_influence_matrix([ai], [aj], self.sigma))
             bqm.add_interaction(i, j, dist * gamma)
 
         # Constraint 4: Choose exactly num_new_cs new charging locations
@@ -163,13 +165,13 @@ class QuantumAnnealing(EVCP):
         linear = np.zeros(num_nodes)
 
         # Constraint 1: Min average distance to POIs
-        dist_pois = gaussian_distance_matrix(
+        dist_pois = gaussian_influence_matrix(
             self.pois, self.potential_nodes, self.sigma
         )
         linear -= np.sum(dist_pois, axis=0) * alpha
 
         # Constraint 2: Max distance to existing chargers
-        dist_cs = gaussian_distance_matrix(
+        dist_cs = gaussian_influence_matrix(
             self.charging_stations, self.potential_nodes, self.sigma
         )
         linear += np.sum(dist_cs, axis=0) * beta
@@ -188,7 +190,7 @@ class QuantumAnnealing(EVCP):
         num_nodes = len(self.potential_nodes)
 
         # Compute the distance matrix between potential new charging locations
-        dist_new_cs = gamma * gaussian_distance_matrix(
+        dist_new_cs = gamma * gaussian_influence_matrix(
             self.potential_nodes, self.potential_nodes, self.sigma
         )
 

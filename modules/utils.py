@@ -4,7 +4,7 @@ import numpy as np
 from scipy.spatial.distance import cdist
 
 
-def gaussian_distance_matrix(
+def gaussian_influence_matrix(
     x: List[Tuple[int, int]], y: List[Tuple[int, int]], sigma: float = 1.0
 ):
     """
