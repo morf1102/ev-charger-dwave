@@ -8,11 +8,11 @@ This repository contains the code for solving the EV charging station placement 
 
 The problem of placing electric vehicle (EV) charging stations can be formulated as a Quadratic Unconstrained Binary Optimization (QUBO) problem. Given a set of potential locations for the charging stations, we aim to identify the optimal subset of locations that maximizes the number of EVs that can be served. Let $\vec{x} = \{x_1, x_2, \dots, x_N\}$ represent binary variables indicating the possible locations of new chargers. The objective function is defined as follows [[2]](#2) :
 
-$$H_1 = \sum_{i,j} x_i \space D(c_i, p_j)$$
+$$H_1 = \sum_{i,j} x_i D(c_i, p_j)$$
 
-$$H_2 = -\sum_{i,j} x_i \space D(c_i, v_j)$$
+$$H_2 = -\sum_{i,j} x_i D(c_i, v_j)$$
 
-$$H_3 = -\sum_{i<j} x_i \space D(c_i, c_j)$$
+$$H_3 = -\sum_{i < j} x_i D(c_i, c_j)$$
 
 $$H_4 = \left( \sum_i x_i \right) - n$$
 
@@ -29,7 +29,7 @@ where:
 The distance function $D$ is defined as:
 
 $$
-D(x, y) = \exp\left( -\frac{\|x - y\|^2}{2\sigma^2} \right)
+D(x, y) = \exp\left( -\frac{||x - y\||^2}{2\sigma^2} \right)
 $$
 
 where $\sigma$ is a parameter that controls the spread of the Gaussian function.
