@@ -1,5 +1,5 @@
 import random
-from typing import List, Tuple, Optional, Union
+from typing import List, Tuple, Optional
 from itertools import combinations
 
 import numpy as np
@@ -24,24 +24,23 @@ class QuantumAnnealing(EVCP):
         num_poi: int,
         num_cs: int,
         num_new_cs: int,
-        hyperparams: ArrayLike = [2, 6, 7, 2],
-        sampler: Union[
-            SimulatedAnnealingSampler, LeapHybridSampler
-        ] = SimulatedAnnealingSampler(),
+        hyperparams: ArrayLike = np.array([2, 6, 7, 2]),
+        sampler: LeapHybridSampler = SimulatedAnnealingSampler(),
         seed: Optional[int] = None,
     ) -> None:
         """
-        Initialize the quantum annealing algorithm.
+        Initialize the quantum annealing solver.
 
         Args:
-            width (int): Width of the grid.
-            height (int): Height of the grid.
-            num_poi (int): Number of points of interest.
-            num_cs (int): Number of existing charging stations.
-            num_new_cs (int): Number of new charging stations to place.
-            num_reads (int, optional): Number of reads. Defaults to 1000.
-            num_sweeps (int, optional): Number of sweeps. Defaults to 1000.
-            seed (int, optional): Random seed. Defaults to None.
+            shape (Tuple[int, int]): The shape of the grid (width, height).
+            num_poi (int): The number of points of interest.
+            num_cs (int): The number of existing charging stations.
+            num_new_cs (int): The number of new charging stations to place.
+            hyperparams (ArrayLike, optional): The hyperparameters for the QUBO model.
+            Defaults to [2, 6, 7, 2].
+            sampler (LeapHybridSampler, optional): The sampler to use.
+            Defaults to SimulatedAnnealingSampler().
+            seed (int, optional): Random seed for reproducibility. Defaults to None.
         """
         # Initialize the scenario
         super().__init__(shape, num_poi, num_cs, num_new_cs, seed=seed)
@@ -50,7 +49,7 @@ class QuantumAnnealing(EVCP):
         self.hyperparams = np.asarray(hyperparams, dtype=float)
         self.sampler = sampler
 
-    def build_bqm(self, hyperparams: ArrayLike = None):
+    def build_bqm(self, hyperparams: ArrayLike = None) -> dimod.BinaryQuadraticModel:
         """
         Build the binary quadratic model for the problem scenario.
 
@@ -109,7 +108,9 @@ class QuantumAnnealing(EVCP):
         )
         return bqm
 
-    def build_bqm_numpy(self, hyperparams: ArrayLike = None):
+    def build_bqm_numpy(
+        self, hyperparams: ArrayLike = None
+    ) -> dimod.BinaryQuadraticModel:
         """
         Build the binary quadratic model for the problem scenario using numpy vectors.
 
@@ -206,57 +207,64 @@ class QuantumAnnealing(EVCP):
 
         return q1, q2, q3
 
-    def run_bqm(self, bqm, **kwargs):
+    def run_bqm(
+        self, bqm: dimod.BinaryQuadraticModel, label: Optional[str] = None, **kwargs
+    ) -> dimod.SampleSet:
         """Solve the bqm with the provided sampler to find new charger locations.
 
         Args:
             bqm (BinaryQuadraticModel): The QUBO model for the problem instance
-            sampler: Sampler or solver to be used
-            potential_new_cs_nodes (list of tuples of ints):
-                Potential new charging locations
+            label (str, optional): Label for the problem. Defaults to None.
             **kwargs: Sampler-specific parameters to be used
 
         Returns:
-            new_charging_nodes (list of tuples of ints):
-                Locations of new charging stations
+            sampleset (SampleSet): The sampleset containing the new charging locations
         """
+        if isinstance(self.sampler, LeapHybridSampler):
+            inp = input("Are you sure you want to run the hybrid solver? (y/n)")
+            assert inp.lower() == "y", "Aborted hybrid solver execution"
+
         # Run the sampler
-        sampleset = self.sampler.sample(bqm, **kwargs)
+        sampleset = self.sampler.sample(bqm, label=label, **kwargs)
         return sampleset
 
-    def score_sampleset(self, sampleset) -> float:
+    def score_sampleset(self, sampleset: dimod.SampleSet) -> float:
         """
-        Score the sampleset based on the distance to POIs and existing charging stations.
-        """
-        n_samples = len(sampleset)
+        Score the sampleset to find the best new charging locations.
 
+        Args:
+            sampleset (dimod.SampleSet): The sampleset containing the new charging locations.
+
+        Returns:
+            float: The score of the best new charging locations.
+        """
         # Extract the new charging nodes from the sampleset
         new_charging_nodes = [
             [self.potential_nodes[k] for k, v in sample.items() if v == 1]
             for sample in sampleset
         ]
         # Calculate the score for each sample
-        score = np.zeros(n_samples)
         best_score = 0
-        for i, new_cs in enumerate(new_charging_nodes):
-            score[i] = self.fitness(new_cs)
-            if score[i] > best_score:
-                best_score = score[i]
+        for new_cs in new_charging_nodes:
+            score = self.fitness(new_cs)
+            if score > best_score:
+                best_score = score
                 self.new_charging_nodes = new_cs
-        total_score = np.mean(score) - np.var(score)
-        return total_score
+        return best_score
 
     def search_hyperparams(
-        self, init_guess: ArrayLike = [2, 6, 7, 2], **kwargs
+        self, init_guess: ArrayLike = np.array([2, 6, 7, 2]), **kwargs
     ) -> np.ndarray:
         """
-        Search for the best hyperparameters for the quantum annealing algorithm.
+        Search for the optimal hyperparameters for the QUBO model.
 
         Args:
-            init_guess (np.array): Initial guess for the hyperparameters.
+            init_guess (ArrayLike, optional): Initial guess for the hyperparameters.
+            Defaults to [2, 6, 7, 2].
+            **kwargs: Additional keyword arguments for the sampler.
 
         Returns:
-            np.array: Best hyperparameters found.
+            np.ndarray: The optimal hyperparameters.
         """
         assert isinstance(
             self.sampler, SimulatedAnnealingSampler
@@ -296,19 +304,18 @@ class GeneticAlgortihm(EVCP):
         seed: Optional[int] = None,
     ) -> None:
         """
-        Initialize the genetic algorithm.
+        Initialize the genetic algorithm solver.
 
         Args:
-            width (int): Width of the grid.
-            height (int): Height of the grid.
-            num_poi (int): Number of points of interest.
-            num_cs (int): Number of existing charging stations.
-            num_new_cs (int): Number of new charging stations to place.
-            pop_size (int, optional): Population size. Defaults to 100.
-            mutation_rate (float, optional): Mutation rate. Defaults to 0.1.
-            crossover_rate (float, optional): Crossover rate. Defaults to 0.5.
-            generations (int, optional): Number of generations. Defaults to 500.
-            seed (int, optional): Random seed. Defaults to None.
+            shape (Tuple[int, int]): The shape of the grid (width, height).
+            num_poi (int): The number of points of interest.
+            num_cs (int): The number of existing charging stations.
+            num_new_cs (int): The number of new charging stations to place.
+            pop_size (int, optional): The population size. Defaults to 100.
+            mutation_rate (float, optional): The mutation rate. Defaults to 0.1.
+            crossover_rate (float, optional): The crossover rate. Defaults to 0.5.
+            generations (int, optional): The number of generations. Defaults to 500.
+            seed (int, optional): Random seed for reproducibility. Defaults to None.
         """
         # Initialize the scenario
         super().__init__(shape, num_poi, num_cs, num_new_cs, seed=seed)

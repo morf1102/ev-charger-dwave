@@ -26,8 +26,7 @@ class EVCP:
         Initialize the scenario for electric vehicle charging station placement.
 
         Args:
-            width (int): The width of the grid.
-            height (int): The height of the grid.
+            shape (Tuple[int, int]): The shape of the grid (width, height).
             num_poi (int): The number of points of interest.
             num_cs (int): The number of existing charging stations.
             num_new_cs (int): The number of new charging stations to place.
@@ -153,9 +152,8 @@ class EVCP:
             cs, new_charging_nodes, self.sigma
         )
 
-        total_influence = (
-            100
-            * np.sum(pois_gaussian_influence_matrix)
-            / np.sum(cs_gaussian_influence_matrix)
+        total_influence = 10 * (
+            np.sum(pois_gaussian_influence_matrix)
+            - np.sum(cs_gaussian_influence_matrix)
         )
         return total_influence
