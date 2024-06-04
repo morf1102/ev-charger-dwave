@@ -45,7 +45,7 @@ The code is organized as follows:
 │   README.md
 │   requirements.txt
 │
-├───modules
+├───src
 │   │   evcp.py
 │   │   solvers.py
 │   │   utils.py
@@ -58,7 +58,7 @@ The code is organized as follows:
     └───solution_grid.png
 ```
 
-The `modules` directory contains the following Python files:
+The `src` directory contains the following Python files:
 
 - `evcp.py`: Contains the implementation of the EV Charging Problem (EVCP) class, which defines the grid, points of interest, and charging stations.
 - `solvers.py`: Contains the implementation of the simulated annealing and genetic algorithm solvers.
