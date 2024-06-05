@@ -6,33 +6,46 @@ This repository contains the code for solving the EV charging station placement 
 
 ## Problem Formulation
 
-The problem of placing electric vehicle (EV) charging stations can be formulated as a Quadratic Unconstrained Binary Optimization (QUBO) problem. Given a set of potential locations for the charging stations, we aim to identify the optimal subset of locations that maximizes the number of EVs that can be served. Let $\vec{x} = \{x_1, x_2, \dots, x_N\}$ represent binary variables indicating the possible locations of new chargers. The objective function is defined as follows [[2]](#2) :
+The problem of placing electric vehicle (EV) charging stations can be formulated as a The problem of placing electric vehicle (EV) charging stations can be formulated as a Quadratic Unconstrained Binary Optimization (QUBO) problem. Given a set of potential locations for the charging stations, we aim to identify a subset of locations that maximizes the coverage of points of interest (POIs) while also maximizing the distance between charging stations to avoid redundancy.
 
-$$H_1 = \sum_{i,j} x_i D(c_i, p_j)$$
+First, we define the distance function $D$:
 
-$$H_2 = -\sum_{i,j} x_i D(c_i, v_j)$$
+$$D(a,b) = \exp\left( -\frac{\|a - b\|^2}{2\sigma^2} \right)$$
 
-$$H_3 = -\sum_{i < j} x_i D(c_i, c_j)$$
+where $\sigma$ is a parameter that controls the spread of the Gaussian function.
 
-$$H_4 = \left( \sum_i x_i \right) - n$$
+Let $\vec{x} = \{x_1, x_2, \dots, x_N\}$ represent binary variables indicating the possible locations of new chargers, where $x_i = 1$ if a charger is placed at location $c_i$, and $x_i = 0$ otherwise. Here, $c_i$ represents the coordinate of the $i$-th potential new charging station.
+
+The objective function we want to minimize is defined as follows [[2]](#2):
+
+$$H_1 = \sum_{i=1}^N \sum_{j=1}^{|p|} x_i \: D(c_i, p_j)$$
+
+$$H_2 = -\sum_{i=1}^N \sum_{j=1}^{|e|} x_i \: D(c_i, e_j)$$
+
+$$H_3 = -\sum_{i < j}^N x_i \: x_j \: D(c_i, c_j)$$
+
+$$H_4 = \left( \sum_{i=1}^N x_i \right) - m$$
 
 $$H = \sum_{i=1}^4 \lambda_i H_i$$
 
 where:
 
 - $p$ denotes points of interest (POIs),
-- $v$ denotes existing charging stations,
-- $c$ denotes new charging stations,
-- $n$ is the desired number of charging stations,
+- $e$ denotes existing charging stations,
+- $c_i$ is the coordinate of the $i$-th potential new charging station,
+- $x_i$ is a binary variable that is 1 if a new charger is placed at $c_i$, and 0 otherwise,
+- $m$ is the desired number of charging stations,
 - $\lambda_i$ are the Lagrange multipliers.
 
-The distance function $D$ is defined as:
+### Scoring Metric
+
+The scoring metric used to evaluate the quality of the solution is defined as:
 
 $$
-D(x, y) = \exp\left( -\frac{||x - y\||^2}{2\sigma^2} \right)
+\textit{Score}=10\cdot\left(\sum_{p,c} D(p,c) - \sum_{c,e} D(c,e) - \sum_{c,c'} D(c,c')\right)
 $$
 
-where $\sigma$ is a parameter that controls the spread of the Gaussian function.
+The goal is to maximize the score by placing the charging stations in optimal locations, while ensuring that new and existing charging stations are not placed too close to each other.
 
 ## Code Structure
 
