@@ -10,7 +10,7 @@ The problem of placing electric vehicle (EV) charging stations can be formulated
 
 First, we define the distance function $D$:
 
-$$D(a,b) = \exp\left( -\frac{\|a - b\|^2}{2\sigma^2} \right)$$
+$$D(a,b) = \exp\left( -\frac{||a - b||^2}{2\sigma^2} \right)$$
 
 where $\sigma$ is a parameter that controls the spread of the Gaussian function.
 
