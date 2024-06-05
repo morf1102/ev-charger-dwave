@@ -146,7 +146,7 @@ class EVCP:
         cs = np.append(self.charging_stations, new_charging_nodes, axis=0)
 
         pois_gaussian_influence_matrix = gaussian_influence_matrix(
-            self.pois, cs, self.sigma
+            self.pois, new_charging_nodes, self.sigma
         )
         cs_gaussian_influence_matrix = gaussian_influence_matrix(
             cs, new_charging_nodes, self.sigma
