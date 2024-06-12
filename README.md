@@ -6,7 +6,7 @@ This repository contains the code for solving the EV charging station placement 
 
 ## Problem Formulation
 
-The problem of placing electric vehicle (EV) charging stations can be formulated as a The problem of placing electric vehicle (EV) charging stations can be formulated as a Quadratic Unconstrained Binary Optimization (QUBO) problem. Given a set of potential locations for the charging stations, we aim to identify a subset of locations that maximizes the coverage of points of interest (POIs) while also maximizing the distance between charging stations to avoid redundancy.
+The problem of placing electric vehicle (EV) charging stations can be formulated as a Quadratic Unconstrained Binary Optimization (QUBO) problem. Given a set of potential locations for the charging stations, we aim to identify a subset of locations that maximizes the coverage of points of interest (POIs) while also maximizing the distance between charging stations to avoid redundancy.
 
 First, we define the distance function $D$:
 
@@ -75,7 +75,7 @@ The `src` directory contains the following Python files:
 
 - `evcp.py`: Contains the implementation of the EV Charging Problem (EVCP) class, which defines the grid, points of interest, and charging stations.
 - `solvers.py`: Contains the implementation of the simulated annealing and genetic algorithm solvers.
-- `utils.py`: Contains utility functions distance calculations.
+- `utils.py`: Contains utility functions.
 
 The `annealing.ipynb` and `genetic.ipynb` notebooks contain the code for solving the EVCP using simulated annealing and genetic algorithms, respectively.
 
