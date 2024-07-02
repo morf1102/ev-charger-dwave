@@ -18,11 +18,11 @@ Let $\vec{x} = \{x_1, x_2, \dots, x_N\}$ represent binary variables indicating t
 
 The objective function we want to minimize is defined as follows [[2]](#2):
 
-$$H_1 = \sum_{i=1}^N \sum_{j=1}^{|p|} x_i \space D(c_i, p_j)$$
+$$H_1 = -\sum_{i=1}^N \sum_{j=1}^{|p|} x_i \space D(c_i, p_j)$$
 
-$$H_2 = -\sum_{i=1}^N \sum_{j=1}^{|e|} x_i \space D(c_i, e_j)$$
+$$H_2 = \sum_{i=1}^N \sum_{j=1}^{|e|} x_i \space D(c_i, e_j)$$
 
-$$H_3 = -\sum_{i < j}^N x_i \space x_j \space D(c_i, c_j)$$
+$$H_3 = \sum_{i < j}^N x_i \space x_j \space D(c_i, c_j)$$
 
 $$H_4 = \left( \sum_{i=1}^N x_i \right) - m$$
 
